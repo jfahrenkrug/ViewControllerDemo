@@ -8,6 +8,8 @@
 
 #import "WebDemosTableViewController.h"
 #import "DataController.h"
+#import "WebDemo.h"
+#import "WebDemoDisplayViewController.h"
 
 
 @implementation WebDemosTableViewController
@@ -21,14 +23,16 @@
 }
 */
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.tableView.rowHeight = 100;
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -88,24 +92,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	static NSString *CellIdentifier = @"Cell";
+	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
     
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
     
 	// Configure the cell.
-	cell.textLabel.text = [[[DataController sharedInstance] webDemoAtIndex:indexPath.row] name];
+	
+	cell.textLabel.text = webDemo.name;
+	cell.imageView.image = [UIImage imageNamed:webDemo.imageFileName];
 	
 	return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
+	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
+	NSLog(@"Ausgewaehlt: %@", webDemo.name);
+
+	WebDemoDisplayViewController *displayViewController = [[WebDemoDisplayViewController alloc] initWithWebDemo:webDemo];
+	[self.navigationController pushViewController:displayViewController animated:YES];
+	[displayViewController release];
 }
 
 

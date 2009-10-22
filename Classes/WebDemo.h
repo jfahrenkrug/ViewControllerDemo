@@ -14,14 +14,18 @@
 @interface WebDemo : NSObject {
 	NSString *name;
 	NSString *fileName;
+	NSString *imageFileName;
 	int type;
 }
 
 @property (readwrite, copy) NSString *name;
 @property (readwrite, copy) NSString *fileName;
+@property (readwrite, copy) NSString *imageFileName;
 @property (assign) int type;
 
-- (id)initWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName;
+
 + (WebDemo *)webDemoWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName;
+
+- (id)initWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName;
 
 @end

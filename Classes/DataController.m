@@ -32,16 +32,16 @@ static DataController *gSharedInstance = nil;
 	cssWebDemos = [[NSMutableArray alloc] init];
 	
 	// set up the demo data
-	NSArray *canvases = [NSArray arrayWithObjects:@"Beauty", @"Boxes", @"Simple Geometry", @"Starfield", @"Cicle Pattern", nil];
+	NSArray *canvases = [NSArray arrayWithObjects:@"Beauty", @"Boxes", @"Simple Geometry", @"Starfield", @"Circle Pattern", nil];
 	
 	for (int i = 0; i < [canvases count]; i++) {
-		[self addWebDemo:[WebDemo webDemoWithType:WEB_DEMO_CANVAS name:[canvases objectAtIndex:i] fileName:[NSString stringWithFormat:@"canvas%i.html", i + 1]]];
+		[self addWebDemo:[WebDemo webDemoWithType:WEB_DEMO_CANVAS name:[canvases objectAtIndex:i] fileName:[NSString stringWithFormat:@"canvas%i", i + 1]]];
 	}
 						 
 	NSArray *csses = [NSArray arrayWithObjects:@"Falling Leaves", @"Spinning Cylinder", @"Card Flip", @"Simple 3D", @"3D iFrame", nil];
 	
 	for (int i = 0; i < [csses count]; i++) {
-		[self addWebDemo:[WebDemo webDemoWithType:WEB_DEMO_CSS name:[csses objectAtIndex:i] fileName:[NSString stringWithFormat:@"css%i.html", i + 1]]];
+		[self addWebDemo:[WebDemo webDemoWithType:WEB_DEMO_CSS name:[csses objectAtIndex:i] fileName:[NSString stringWithFormat:@"css%i", i + 1]]];
 	}
 	
 	return self;

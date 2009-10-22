@@ -1,9 +1,9 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
-<body>
+<body style="padding: 0px; margin: 0px">
   
-  <canvas id="animated" width="600px" height="600px"></canvas>
+  <canvas id="animated" width="320px" height="367px"></canvas>
 
   <script type="text/javascript">/*<![CDATA[*/
   var animatedctx = document.getElementById('animated').getContext('2d');
@@ -12,7 +12,7 @@
     animatedctx.beginPath();
 
     animatedctx.fillStyle='rgba('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
-    animatedctx.rect(Math.random()*600,Math.random()*600,Math.random()*100, Math.random()*100 );
+    animatedctx.rect(Math.random()*320,Math.random()*367,Math.random()*100, Math.random()*100 );
     animatedctx.fill();
     setTimeout('addBox()', 50 );
   }

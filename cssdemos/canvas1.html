@@ -4,8 +4,8 @@
     <title>spread</title>
     <script type="text/javascript">
         var startradius = 20;
-        var width = 600;
-        var height = 600;
+        var width = 320;
+        var height = 367;
         var frame_time = 30;
         var straighten_factor = 0.95;
         var curviness = 0.2;
@@ -119,7 +119,7 @@
         
     </script>
   </head>
-  <body onload="setup()">
+  <body onload="setup()" style="padding: 0px; margin: 0px">
     <div style="display:none">
     <p>
         <input type="checkbox" id="cyclecheck" checked="checked" /> <label for="cyclecheck">Cycle colors</label>
@@ -130,6 +130,6 @@
         <label for="branchframestext">Spawn new every n frames:</label> <input type="text" id="branchframestext" value="20" size="3" />
     </p>
     </div>
-    <canvas id="notepad" width="600" height="600"></canvas>
+    <canvas id="notepad" width="320" height="367"></canvas>
   </body>
 </html>

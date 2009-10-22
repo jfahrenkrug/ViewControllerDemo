@@ -67,23 +67,25 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
   <head>
     <title>Falling Leaves &mdash; Using CSS Animations and Transforms</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=500px, initial-scale=0.64">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+    <meta name="viewport" content="width=320px">
     <!-- The leaves.css file animates the leaves -->
     <style>
       body
       {
           background-color: #4E4226;
+		  padding: 0px;
+		  margin: 0px;
       }
 
       #container {
           position: relative;
-          height: 700px;
-          width: 500px;
-          margin: 50px auto;
+          height: 367px;
+          width: 320px;
+          margin: 0px;
+		  padding: 0px;
           overflow: hidden;
-          border: 4px solid #5C090A;
-          background: #4E4226 url('images/backgroundLeaves.jpg') no-repeat top left;
+          border: 0px;
+          background: #4E4226 url('backgroundLeaves.jpg') no-repeat top left;
       }
 
       /* Defines the position and dimensions of the leafContainer div */
@@ -92,6 +94,8 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
           position: absolute;
           width: 100%;
           height: 100%;
+		  margin: 0px;
+		  padding: 0px;
       }
 
 
@@ -173,7 +177,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
           /* Move a leaf to -300 pixels in the y-axis at the start of the animation */
           0%   { -webkit-transform: translate(0px, -50px); }
           /* Move a leaf to 600 pixels in the y-axis at the end of the animation */
-          100% { -webkit-transform: translate(0px, 650px); }
+          100% { -webkit-transform: translate(0px, 340px); }
       }
 
       /* Rotates a leaf from -50 to 50 degrees in 2D space */
@@ -267,12 +271,12 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
           var image = document.createElement('img');
 
           /* Randomly choose a leaf image and assign it to the newly created element */
-          image.src = 'images/realLeaf' + randomInteger(1, 5) + '.png';
+          image.src = 'realLeaf' + randomInteger(1, 5) + '.png';
 
           leafDiv.style.top = "-100px";
 
           /* Position the leaf at a random location along the screen */
-          leafDiv.style.left = pixelValue(randomInteger(0, 500));
+          leafDiv.style.left = pixelValue(randomInteger(0, 320));
 
           /* Randomly choose a spin animation */
           var spinAnimationName = (Math.random() < 0.5) ? 'clockwiseSpin' : 'counterclockwiseSpinAndFlip';

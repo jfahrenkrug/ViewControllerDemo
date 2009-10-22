@@ -32,6 +32,18 @@
 		8F638176108DB0A4006BDE19 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F638173108DB0A4006BDE19 /* DataController.m */; };
 		8F638177108DB0A4006BDE19 /* WebDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F638175108DB0A4006BDE19 /* WebDemo.m */; };
 		8F63817F108DB166006BDE19 /* WebDemosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F63817E108DB166006BDE19 /* WebDemosTableViewController.m */; };
+		8F6381A31090270D006BDE19 /* canvas1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6381991090270D006BDE19 /* canvas1.png */; };
+		8F6381A41090270D006BDE19 /* canvas2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819A1090270D006BDE19 /* canvas2.png */; };
+		8F6381A51090270D006BDE19 /* canvas3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819B1090270D006BDE19 /* canvas3.png */; };
+		8F6381A61090270D006BDE19 /* canvas4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819C1090270D006BDE19 /* canvas4.png */; };
+		8F6381A71090270D006BDE19 /* canvas5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819D1090270D006BDE19 /* canvas5.png */; };
+		8F6381A81090270D006BDE19 /* css1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819E1090270D006BDE19 /* css1.png */; };
+		8F6381A91090270D006BDE19 /* css2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63819F1090270D006BDE19 /* css2.png */; };
+		8F6381AA1090270D006BDE19 /* css3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6381A01090270D006BDE19 /* css3.png */; };
+		8F6381AB1090270D006BDE19 /* css4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6381A11090270D006BDE19 /* css4.png */; };
+		8F6381AC1090270D006BDE19 /* css5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6381A21090270D006BDE19 /* css5.png */; };
+		8F6381F31090525E006BDE19 /* WebDemoDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6381F11090525E006BDE19 /* WebDemoDisplayViewController.m */; };
+		8F6381F41090525E006BDE19 /* WebDemoDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6381F21090525E006BDE19 /* WebDemoDisplayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +79,19 @@
 		8F638175108DB0A4006BDE19 /* WebDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemo.m; sourceTree = "<group>"; };
 		8F63817D108DB166006BDE19 /* WebDemosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDemosTableViewController.h; sourceTree = "<group>"; };
 		8F63817E108DB166006BDE19 /* WebDemosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemosTableViewController.m; sourceTree = "<group>"; };
+		8F6381991090270D006BDE19 /* canvas1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas1.png; sourceTree = "<group>"; };
+		8F63819A1090270D006BDE19 /* canvas2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas2.png; sourceTree = "<group>"; };
+		8F63819B1090270D006BDE19 /* canvas3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas3.png; sourceTree = "<group>"; };
+		8F63819C1090270D006BDE19 /* canvas4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas4.png; sourceTree = "<group>"; };
+		8F63819D1090270D006BDE19 /* canvas5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas5.png; sourceTree = "<group>"; };
+		8F63819E1090270D006BDE19 /* css1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = css1.png; sourceTree = "<group>"; };
+		8F63819F1090270D006BDE19 /* css2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = css2.png; sourceTree = "<group>"; };
+		8F6381A01090270D006BDE19 /* css3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = css3.png; sourceTree = "<group>"; };
+		8F6381A11090270D006BDE19 /* css4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = css4.png; sourceTree = "<group>"; };
+		8F6381A21090270D006BDE19 /* css5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = css5.png; sourceTree = "<group>"; };
+		8F6381F01090525E006BDE19 /* WebDemoDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDemoDisplayViewController.h; sourceTree = "<group>"; };
+		8F6381F11090525E006BDE19 /* WebDemoDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemoDisplayViewController.m; sourceTree = "<group>"; };
+		8F6381F21090525E006BDE19 /* WebDemoDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebDemoDisplayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +111,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8F6381F01090525E006BDE19 /* WebDemoDisplayViewController.h */,
+				8F6381F11090525E006BDE19 /* WebDemoDisplayViewController.m */,
+				8F6381F21090525E006BDE19 /* WebDemoDisplayView.xib */,
 				8F638172108DB0A4006BDE19 /* DataController.h */,
 				8F638173108DB0A4006BDE19 /* DataController.m */,
 				8F638174108DB0A4006BDE19 /* WebDemo.h */,
@@ -151,6 +179,7 @@
 		8F638152108DB075006BDE19 /* cssdemos */ = {
 			isa = PBXGroup;
 			children = (
+				8F6381981090270D006BDE19 /* icons */,
 				8F638153108DB075006BDE19 /* canvas1.html */,
 				8F638154108DB075006BDE19 /* canvas2.html */,
 				8F638155108DB075006BDE19 /* canvas3.html */,
@@ -176,6 +205,23 @@
 				8F638162108DB075006BDE19 /* realLeaf4.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		8F6381981090270D006BDE19 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				8F6381991090270D006BDE19 /* canvas1.png */,
+				8F63819A1090270D006BDE19 /* canvas2.png */,
+				8F63819B1090270D006BDE19 /* canvas3.png */,
+				8F63819C1090270D006BDE19 /* canvas4.png */,
+				8F63819D1090270D006BDE19 /* canvas5.png */,
+				8F63819E1090270D006BDE19 /* css1.png */,
+				8F63819F1090270D006BDE19 /* css2.png */,
+				8F6381A01090270D006BDE19 /* css3.png */,
+				8F6381A11090270D006BDE19 /* css4.png */,
+				8F6381A21090270D006BDE19 /* css5.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +283,17 @@
 				8F63816F108DB075006BDE19 /* realLeaf2.png in Resources */,
 				8F638170108DB075006BDE19 /* realLeaf3.png in Resources */,
 				8F638171108DB075006BDE19 /* realLeaf4.png in Resources */,
+				8F6381A31090270D006BDE19 /* canvas1.png in Resources */,
+				8F6381A41090270D006BDE19 /* canvas2.png in Resources */,
+				8F6381A51090270D006BDE19 /* canvas3.png in Resources */,
+				8F6381A61090270D006BDE19 /* canvas4.png in Resources */,
+				8F6381A71090270D006BDE19 /* canvas5.png in Resources */,
+				8F6381A81090270D006BDE19 /* css1.png in Resources */,
+				8F6381A91090270D006BDE19 /* css2.png in Resources */,
+				8F6381AA1090270D006BDE19 /* css3.png in Resources */,
+				8F6381AB1090270D006BDE19 /* css4.png in Resources */,
+				8F6381AC1090270D006BDE19 /* css5.png in Resources */,
+				8F6381F41090525E006BDE19 /* WebDemoDisplayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +309,7 @@
 				8F638176108DB0A4006BDE19 /* DataController.m in Sources */,
 				8F638177108DB0A4006BDE19 /* WebDemo.m in Sources */,
 				8F63817F108DB166006BDE19 /* WebDemosTableViewController.m in Sources */,
+				8F6381F31090525E006BDE19 /* WebDemoDisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
