@@ -1,23 +1,23 @@
 //
-//  WebDemoDisplayViewController.m
+//  WebDemoSourceViewController.m
 //  ViewControllerDemo
 //
-//  Created by Johannes Fahrenkrug on 22.10.09.
+//  Created by Johannes Fahrenkrug on 28.10.09.
 //  Copyright 2009 Springenwerk. All rights reserved.
 //
 
-#import "WebDemoDisplayViewController.h"
+#import "WebDemoSourceViewController.h"
 #import "WebDemo.h"
 
 
-@implementation WebDemoDisplayViewController
+@implementation WebDemoSourceViewController
 
 - (id)initWithWebDemo:(WebDemo *)aWebDemo {
-	if (!(self = [self initWithNibName:@"WebDemoDisplayView" bundle:nil]))
+	if (!(self = [self initWithNibName:@"WebDemoSourceView" bundle:nil]))
 		return nil;
-		
+	
 	if (!aWebDemo) {
-		@throw [NSException exceptionWithName:@"WebDemoDisplayViewControllerBadInitCall" reason:@"webDemo is nil" userInfo:nil];
+		@throw [NSException exceptionWithName:@"WebDemoSourceViewControllerBadInitCall" reason:@"webDemo is nil" userInfo:nil];
 	}
 	
 	webDemo = [aWebDemo retain];
@@ -32,17 +32,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	NSString *path = [[NSBundle mainBundle] pathForResource:webDemo.fileName ofType:@"html"];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath: path]]];
+	textView.text = [NSString stringWithContentsOfURL:[NSURL fileURLWithPath: path] encoding:NSUTF8StringEncoding error:nil];
 }
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

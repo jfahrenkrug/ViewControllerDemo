@@ -47,6 +47,8 @@
 		8F63826410981AA3006BDE19 /* icon_text_align_justify.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F63826310981AA3006BDE19 /* icon_text_align_justify.png */; };
 		8F63826610981AD7006BDE19 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 8F63826510981AD7006BDE19 /* README */; };
 		8F63826E10981D19006BDE19 /* WebDemosSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F63826D10981D19006BDE19 /* WebDemosSimpleTableViewController.m */; };
+		8F6382A4109825EE006BDE19 /* WebDemoSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6382A2109825EE006BDE19 /* WebDemoSourceViewController.m */; };
+		8F6382A5109825EE006BDE19 /* WebDemoSourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6382A3109825EE006BDE19 /* WebDemoSourceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,9 @@
 		8F63826510981AD7006BDE19 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		8F63826C10981D19006BDE19 /* WebDemosSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDemosSimpleTableViewController.h; sourceTree = "<group>"; };
 		8F63826D10981D19006BDE19 /* WebDemosSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemosSimpleTableViewController.m; sourceTree = "<group>"; };
+		8F6382A1109825EE006BDE19 /* WebDemoSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDemoSourceViewController.h; sourceTree = "<group>"; };
+		8F6382A2109825EE006BDE19 /* WebDemoSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemoSourceViewController.m; sourceTree = "<group>"; };
+		8F6382A3109825EE006BDE19 /* WebDemoSourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebDemoSourceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8F6382A1109825EE006BDE19 /* WebDemoSourceViewController.h */,
+				8F6382A2109825EE006BDE19 /* WebDemoSourceViewController.m */,
+				8F6382A3109825EE006BDE19 /* WebDemoSourceView.xib */,
 				8F6381F01090525E006BDE19 /* WebDemoDisplayViewController.h */,
 				8F6381F11090525E006BDE19 /* WebDemoDisplayViewController.m */,
 				8F6381F21090525E006BDE19 /* WebDemoDisplayView.xib */,
@@ -307,6 +315,7 @@
 				8F63826210981A54006BDE19 /* 41-picture-frame.png in Resources */,
 				8F63826410981AA3006BDE19 /* icon_text_align_justify.png in Resources */,
 				8F63826610981AD7006BDE19 /* README in Resources */,
+				8F6382A5109825EE006BDE19 /* WebDemoSourceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				8F63817F108DB166006BDE19 /* WebDemosTableViewController.m in Sources */,
 				8F6381F31090525E006BDE19 /* WebDemoDisplayViewController.m in Sources */,
 				8F63826E10981D19006BDE19 /* WebDemosSimpleTableViewController.m in Sources */,
+				8F6382A4109825EE006BDE19 /* WebDemoSourceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

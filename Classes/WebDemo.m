@@ -11,7 +11,7 @@
 
 @implementation WebDemo
 
-@synthesize name, fileName, imageFileName, type;
+@synthesize name, fileName, type;
 
 + (WebDemo *)webDemoWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName {
 	return [[[WebDemo alloc] initWithType:aType name:aName fileName:aFileName] autorelease];

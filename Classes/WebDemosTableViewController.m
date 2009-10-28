@@ -10,6 +10,7 @@
 #import "DataController.h"
 #import "WebDemo.h"
 #import "WebDemoDisplayViewController.h"
+#import "WebDemoSourceViewController.h"
 
 
 @implementation WebDemosTableViewController
@@ -97,7 +98,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	}
     
 	// Configure the cell.
@@ -117,6 +118,14 @@
 	WebDemoDisplayViewController *displayViewController = [[WebDemoDisplayViewController alloc] initWithWebDemo:webDemo];
 	[self.navigationController pushViewController:displayViewController animated:YES];
 	[displayViewController release];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
+	
+	WebDemoSourceViewController *sourceViewController = [[WebDemoSourceViewController alloc] initWithWebDemo:webDemo];
+	[self.navigationController pushViewController:sourceViewController animated:YES];
+	[sourceViewController release];
 }
 
 
