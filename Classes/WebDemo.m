@@ -35,9 +35,23 @@
 	
 	self.name = aName;
 	self.fileName = aFileName;
-	self.imageFileName = [NSString stringWithFormat:@"%@.png", aFileName];
+	self.type = aType;
 	
 	return self;
+}
+
+- (NSString *)imageFileName {
+	return [NSString stringWithFormat:@"%@.png", fileName];
+}
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@ (%@.html)", (type == WEB_DEMO_CSS ? @"CSS Transform" : @"Canvas Tag"), fileName];
+}
+
+- (void)dealloc {
+	[name release];
+	[fileName release];
+	[super dealloc];
 }
 
 

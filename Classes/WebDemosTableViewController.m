@@ -96,13 +96,14 @@
     
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
     
 	// Configure the cell.
 	
 	cell.textLabel.text = webDemo.name;
+	cell.detailTextLabel.text = [webDemo description];
 	cell.imageView.image = [UIImage imageNamed:webDemo.imageFileName];
 	
 	return cell;
