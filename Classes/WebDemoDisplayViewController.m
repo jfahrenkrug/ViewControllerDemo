@@ -7,6 +7,7 @@
 //
 
 #import "WebDemoDisplayViewController.h"
+#import "WebDemoSourceViewController.h"
 #import "WebDemo.h"
 
 
@@ -33,6 +34,27 @@
     [super viewDidLoad];
 	NSString *path = [[NSBundle mainBundle] pathForResource:webDemo.fileName ofType:@"html"];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath: path]]];
+	
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+																							target:self action:@selector(showSource)] autorelease];
+	
+	
+}
+
+- (void)showSource {
+	WebDemoSourceViewController *sourceController = [[WebDemoSourceViewController alloc] initWithWebDemo:webDemo];
+	UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:sourceController];
+	
+	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	
+	sourceController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply
+																								  target:sourceController action:@selector(dismissModalViewControllerAnimated:)] autorelease];
+	
+	[self presentModalViewController: controller animated: YES];
+	
+	
+	[controller release];
+	[sourceController release];
 }
 
 
