@@ -12,26 +12,18 @@
 #import "WebDemoDisplayViewController.h"
 #import "WebDemoSourceViewController.h"
 
+@interface WebDemosTableViewController(PrivateMethods)
+- (WebDemo *)webDemoForIndexPath:(NSIndexPath *)indexPath;
+@end
+
 
 @implementation WebDemosTableViewController
-
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    if (self = [super initWithStyle:style]) {
-    }
-    return self;
-}
-*/
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
 	self.tableView.rowHeight = 100;
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
@@ -80,20 +72,33 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (section == 0) {
+		return @"CSS Transformations";
+	} else {
+		return @"Canvas";
+	}
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[DataController sharedInstance] numberOfWebDemos];
+	if (section == 0) {
+		return [[DataController sharedInstance] numberOfCssWebDemos];
+	} else {
+		return [[DataController sharedInstance] numberOfCanvasWebDemos];
+	}
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	static NSString *CellIdentifier = @"Cell";
-	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
+	
+	WebDemo *webDemo = [self webDemoForIndexPath:indexPath];
     
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
@@ -112,7 +117,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
+	WebDemo *webDemo = [self webDemoForIndexPath:indexPath];
 	NSLog(@"Ausgewaehlt: %@", webDemo.name);
 
 	WebDemoDisplayViewController *displayViewController = [[WebDemoDisplayViewController alloc] initWithWebDemo:webDemo];
@@ -121,11 +126,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
+	WebDemo *webDemo = [self webDemoForIndexPath:indexPath];
 	
 	WebDemoSourceViewController *sourceViewController = [[WebDemoSourceViewController alloc] initWithWebDemo:webDemo];
 	[self.navigationController pushViewController:sourceViewController animated:YES];
 	[sourceViewController release];
+}
+
+- (WebDemo *)webDemoForIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.section == 0) {
+		return [[DataController sharedInstance] cssWebDemoAtIndex:indexPath.row];
+	} else {
+		return [[DataController sharedInstance] canvasWebDemoAtIndex:indexPath.row];
+	}
 }
 
 

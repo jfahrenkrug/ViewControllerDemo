@@ -49,6 +49,7 @@
 		8F63826E10981D19006BDE19 /* WebDemosSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F63826D10981D19006BDE19 /* WebDemosSimpleTableViewController.m */; };
 		8F6382A4109825EE006BDE19 /* WebDemoSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6382A2109825EE006BDE19 /* WebDemoSourceViewController.m */; };
 		8F6382A5109825EE006BDE19 /* WebDemoSourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6382A3109825EE006BDE19 /* WebDemoSourceView.xib */; };
+		8FA7C75B10A165F2005D1560 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA7C75A10A165F2005D1560 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		8F6382A1109825EE006BDE19 /* WebDemoSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDemoSourceViewController.h; sourceTree = "<group>"; };
 		8F6382A2109825EE006BDE19 /* WebDemoSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDemoSourceViewController.m; sourceTree = "<group>"; };
 		8F6382A3109825EE006BDE19 /* WebDemoSourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebDemoSourceView.xib; sourceTree = "<group>"; };
+		8FA7C75A10A165F2005D1560 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8FA7C75A10A165F2005D1560 /* icon.png */,
 				8F63826110981A54006BDE19 /* 41-picture-frame.png */,
 				8F63826310981AA3006BDE19 /* icon_text_align_justify.png */,
 				8F638152108DB075006BDE19 /* cssdemos */,
@@ -316,6 +319,7 @@
 				8F63826410981AA3006BDE19 /* icon_text_align_justify.png in Resources */,
 				8F63826610981AD7006BDE19 /* README in Resources */,
 				8F6382A5109825EE006BDE19 /* WebDemoSourceView.xib in Resources */,
+				8FA7C75B10A165F2005D1560 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
