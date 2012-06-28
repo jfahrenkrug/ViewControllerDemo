@@ -10,30 +10,27 @@
 
 @class WebDemo;
 
-@interface DataController : NSObject {
-	NSMutableArray *canvasWebDemos;
-	NSMutableArray *cssWebDemos;
-}
+@interface DataController : NSObject 
 
-@property (nonatomic, retain, readwrite) NSMutableArray *canvasWebDemos;
-@property (nonatomic, retain, readwrite) NSMutableArray *cssWebDemos;
+@property (nonatomic, strong) NSMutableArray *canvasWebDemos;
+@property (nonatomic, strong) NSMutableArray *cssWebDemos;
 
 + (DataController *) sharedInstance;
 
 // all web demos
 - (NSArray *)webDemos;
-- (void) addWebDemo:(WebDemo *)aWebDemo;
-- (int) numberOfWebDemos;
+- (void)addWebDemo:(WebDemo *)aWebDemo;
+- (int)numberOfWebDemos;
 - (WebDemo *)webDemoAtIndex:(int)anIndex;
 - (void)removeWebDemoAtIndex:(int)anIndex;
 
 // canvas
-- (int) numberOfCanvasWebDemos;
+- (int)numberOfCanvasWebDemos;
 - (WebDemo *)canvasWebDemoAtIndex:(int)anIndex;
 - (void)removeCanvasWebDemoAtIndex:(int)anIndex;
 
 // css
-- (int) numberOfCssWebDemos;
+- (int)numberOfCssWebDemos;
 - (WebDemo *)cssWebDemoAtIndex:(int)anIndex;
 - (void)removeCssWebDemoAtIndex:(int)anIndex;
 

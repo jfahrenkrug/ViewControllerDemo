@@ -9,17 +9,29 @@
 #import "WebDemosSimpleTableViewController.h"
 #import "WebDemo.h"
 #import "DataController.h"
-#import "WebDemoDisplayViewController.h"
+#import "WebDemosDisplayViewController.h"
 
 
 @implementation WebDemosSimpleTableViewController
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    if (!(self = [super initWithStyle:style]))
+        return nil;
+    
+    self.title = @"Simple";
+        
+    return self;
+}
+
 
 // Override to allow orientations other than the default portrait orientation.
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return YES;
 }
+ 
 
 #pragma mark Table view methods
 
@@ -41,7 +53,7 @@
     
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
     
@@ -55,15 +67,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	WebDemo *webDemo = [[DataController sharedInstance] webDemoAtIndex:indexPath.row];
 	
-	WebDemoDisplayViewController *displayViewController = [[WebDemoDisplayViewController alloc] initWithWebDemo:webDemo];
+	
+	WebDemosDisplayViewController *displayViewController = [[WebDemosDisplayViewController alloc] initWithWebDemo:webDemo];
 	[self.navigationController pushViewController:displayViewController animated:YES];
-	[displayViewController release];
+
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 
 @end

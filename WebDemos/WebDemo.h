@@ -11,15 +11,11 @@
 #define WEB_DEMO_CANVAS 0
 #define WEB_DEMO_CSS 1
 
-@interface WebDemo : NSObject {
-	NSString *name;
-	NSString *fileName;
-	int type;
-}
+@interface WebDemo : NSObject 
 
-@property (readwrite, copy) NSString *name;
-@property (readwrite, copy) NSString *fileName;
-@property (assign) int type;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, assign) int type;
 
 
 + (WebDemo *)webDemoWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName;

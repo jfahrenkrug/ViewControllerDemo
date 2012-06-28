@@ -11,10 +11,10 @@
 
 @implementation WebDemo
 
-@synthesize name, fileName, type;
+@synthesize name=_name, fileName=_fileName, type=_type;
 
 + (WebDemo *)webDemoWithType:(int)aType name:(NSString *)aName fileName:(NSString *)aFileName {
-	return [[[WebDemo alloc] initWithType:aType name:aName fileName:aFileName] autorelease];
+	return [[WebDemo alloc] initWithType:aType name:aName fileName:aFileName];
 }
 
 - (id)init {
@@ -41,18 +41,13 @@
 }
 
 - (NSString *)imageFileName {
-	return [NSString stringWithFormat:@"%@.png", fileName];
+	return [NSString stringWithFormat:@"%@.png", _fileName];
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"%@ (%@.html)", (type == WEB_DEMO_CSS ? @"CSS Transform" : @"Canvas Tag"), fileName];
+	return [NSString stringWithFormat:@"%@ (%@.html)", (_type == WEB_DEMO_CSS ? @"CSS Transform" : @"Canvas Tag"), _fileName];
 }
 
-- (void)dealloc {
-	[name release];
-	[fileName release];
-	[super dealloc];
-}
 
 
 @end

@@ -10,10 +10,10 @@
 @class WebDemo;
 
 
-@interface WebDemoSourceViewController : UIViewController {
-	WebDemo *webDemo;
-	IBOutlet UITextView *textView;
-}
+@interface WebDemoSourceViewController : UIViewController 
+
+@property (nonatomic, strong) WebDemo *webDemo;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
 
 - (id)initWithWebDemo:(WebDemo *)aWebDemo;
 
